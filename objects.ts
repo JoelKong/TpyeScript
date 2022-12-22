@@ -76,3 +76,23 @@ const user: User = {
 };
 
 user.id = 123123;
+
+//Intersection types
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle &
+  Colorful & {
+    age: number;
+  };
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "yellow",
+  age: 5,
+};
