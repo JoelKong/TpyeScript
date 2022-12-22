@@ -54,3 +54,25 @@ const mySong: Song = {
 
 calculatePayout(mySong);
 printSong(mySong);
+
+//Optional Params
+type bb = {
+  x: number;
+  y: number;
+  z?: number;
+};
+
+const myPoint: Point = { x: 1, y: 3 };
+
+//Read only
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 1233,
+  username: "cat",
+};
+
+user.id = 123123;
