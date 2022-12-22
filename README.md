@@ -1,2 +1,3 @@
-# TpyeScript
+# TypeScript
+
 Learning typescript
