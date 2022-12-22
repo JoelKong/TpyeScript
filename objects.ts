@@ -25,3 +25,32 @@ let aaa: Point = { x: 34, y: 2 };
 
 type myNum = number;
 let age: myNum = 23234;
+
+//Nested objects
+type Song = {
+  title: string;
+  artist: string;
+  numStreams: number;
+  credits: { producer: string; writer: String };
+};
+
+function calculatePayout(song: Song): number {
+  return song.numStreams * 0.0033;
+}
+
+function printSong(song: Song): void {
+  console.log(`${song.title} - ${song.artist}`);
+}
+
+const mySong: Song = {
+  title: "Unchained Melody",
+  artist: "Righteous Brothers",
+  numStreams: 1234545,
+  credits: {
+    producer: "Phil Spector",
+    writer: "Alex North",
+  },
+};
+
+calculatePayout(mySong);
+printSong(mySong);
