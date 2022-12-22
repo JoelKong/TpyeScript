@@ -14,3 +14,12 @@ doSomething("ChickenFace", "asd", false);
 function wee(person: string = "stranger") {
   return `Hi there, ${person}`;
 }
+
+//Return types
+function wowo(person: string = "stranger"): string {
+  return `Hi there, ${person}`;
+}
+
+const add = (x: number, y: number): number => {
+  return x;
+};
