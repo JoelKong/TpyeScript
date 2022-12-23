@@ -7,3 +7,11 @@ function printAge(age: number | string): void {
 }
 
 //Type narrowing
+function calculateTax(price: number | string, tax: number) {
+  if (typeof price === "string") {
+    price = price.replace("$", "");
+    return parseFloat(price) * tax;
+  } else {
+    price * tax;
+  }
+}
