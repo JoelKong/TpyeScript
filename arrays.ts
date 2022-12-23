@@ -10,3 +10,5 @@ type Pointt = {
 
 const coords: Pointt[] = [];
 coords.push();
+
+const board: string[][] = [["X"]];
