@@ -15,3 +15,10 @@ function calculateTax(price: number | string, tax: number) {
     price * tax;
   }
 }
+
+const stuff: (number | string)[] = [1, 2, 3];
+
+const mood: "Happy" | "Sad" = "Happy";
+
+type DayOfWeek = "Monday" | "Tuesday" | "Wednesday";
+let today: DayOfWeek = "Monday";
