@@ -1,4 +1,5 @@
 class Player {
+  static description = "Player In Our Game";
   #score = 0;
   numLives = 10;
 
@@ -8,8 +9,19 @@ class Player {
     this.#secret();
   }
 
+  static randomPlayer() {
+    return new Player("Andy", "Samberg");
+  }
+  //const p2 = Player.randomPlayer()
+
   get fullName() {
     return `${this.first} ${this.last}`;
+  }
+
+  set fullName(newName) {
+    const [first, last] = newName.split(" ");
+    this.first = first;
+    this.last = last;
   }
 
   get score() {
