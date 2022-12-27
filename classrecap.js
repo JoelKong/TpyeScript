@@ -55,5 +55,13 @@ class Player {
   }
 }
 
+class AdminPlayer extends Player {
+  isAdmin = true;
+  constructor(first, last, powers) {
+    super(first, last); //Reference to first constructor
+    this.powers = powers;
+  }
+}
+
 const player1 = new Player("blue", "steele");
 player1.taunt();
