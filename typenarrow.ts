@@ -20,3 +20,11 @@ const printLetters = (word?: string) {
         console.log('sdfds')
     }
 }
+
+//Equality Narrowing (less common)
+function someDemo(x:string | number, y: string | boolean) {
+    if (x === y) {
+        x
+        y
+    }
+}
