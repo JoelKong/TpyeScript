@@ -1,7 +1,8 @@
 class Playerr {
   //   public readonly first: string;
   //   public readonly last: string;
-  private _score: number = 0;
+  //   private _score: number = 0;
+  protected _score = 0;
 
   //   constructor(first: string, last: string) {
   //     this.first = first;
@@ -30,5 +31,12 @@ class Playerr {
       throw new Error("Score cannot be negative!");
     }
     this._score = newScore;
+  }
+}
+
+class SuperPlayer extends Playerr {
+  public isAdmin: boolean = true;
+  maxScore() {
+    this._score = 99999;
   }
 }
