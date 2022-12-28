@@ -28,3 +28,23 @@ function someDemo(x:string | number, y: string | boolean) {
         y
     }
 }
+
+//in operation narrowing
+interface Movie {
+    title: string,
+    duration: number
+}
+
+interface TVShow {
+    title: string,
+    numEpisodes: number,
+    episodeDuration: number
+}
+
+function getRuntime(media: Movie | TVShow) {
+    if ("numEpisodes" in media) {
+        return media.numEpisodes * media.episodeDuration
+    }
+    return media.duration
+}
+getRuntime({title: 'amadues',duration: 140})
