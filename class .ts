@@ -48,3 +48,14 @@ interface Colorful {
 class Bike implements Colorful {
   constructor(public color: string) {}
 }
+
+abstract class Employee {
+  constructor(public first: string, public last: string) {}
+  abstract getPay(): number;
+}
+
+class FullTimeEmployee extends Employee {
+  getPay(): number {
+    return 13;
+  }
+}
