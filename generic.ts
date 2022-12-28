@@ -18,3 +18,13 @@ function getRandomElement<T>(list: T[]): T {
   const randIdx = Math.floor(Math.random() * list.length);
   return list[randIdx];
 }
+
+getRandomElement(["a", "b"]);
+
+function merge<T, U>(object1: T, object2: U) {
+  return {
+    ...object1,
+    ...object2,
+  };
+}
+const comboObj = merge({ name: "colt" }, { pets: ["blue", "elton"] });
