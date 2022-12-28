@@ -118,5 +118,9 @@ function getFarmAnimalSound(animal: FarmAnimal) {
         return "oink!"
         case("cow"):
         animal
+        default:
+            const shouldNeverGetHere: never = animal
     }
 }
+
+//Exhaustive checking
