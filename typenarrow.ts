@@ -123,4 +123,3 @@ function getFarmAnimalSound(animal: FarmAnimal) {
     }
 }
 
-//Exhaustive checking
