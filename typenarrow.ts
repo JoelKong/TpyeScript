@@ -48,3 +48,25 @@ function getRuntime(media: Movie | TVShow) {
     return media.duration
 }
 getRuntime({title: 'amadues',duration: 140})
+
+
+//instanceof Narrowing
+function printFullDate(date: string | Date) {
+    if(date instanceof Date) {
+        console.log(date.toUTCString())
+    } else {
+        new Date(date).toUTCString()
+    }
+}
+
+class User {
+    constructor(public username: string){}
+}
+class Company {
+    constructor(public name: string) {}
+}
+function printName(entity: User | Company) {
+    if (entity instanceof User) {
+        entity
+    }
+}
