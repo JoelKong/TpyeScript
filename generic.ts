@@ -36,3 +36,27 @@ interface Lengthy {
 function printDoubleLength<T extends Lengthy>(thing: T): number {
   return thing.length * 2;
 }
+
+//Default type param
+function makeEmptyList<T = number>(): T[] {
+  return [];
+}
+
+//Generic class
+interface Song {
+  title: string;
+  artist: string;
+}
+
+interface Video {
+  title: string;
+  creator: string;
+  resolution: string;
+}
+
+class Playlist<T> {
+  public queue: T[] = [];
+  add(el: T) {
+    this.queue.push(el);
+  }
+}
