@@ -40,3 +40,11 @@ class SuperPlayer extends Playerr {
     this._score = 99999;
   }
 }
+
+interface Colorful {
+  color: string;
+}
+
+class Bike implements Colorful {
+  constructor(public color: string) {}
+}
