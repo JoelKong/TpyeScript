@@ -1,7 +1,7 @@
 class Playerr {
   //   public readonly first: string;
   //   public readonly last: string;
-  #score: number = 0;
+  private _score: number = 0;
 
   //   constructor(first: string, last: string) {
   //     this.first = first;
@@ -15,5 +15,20 @@ class Playerr {
   //error when called outside class but still can compile to JS so #private variable still better
   private secretMethod(): void {
     console.log("asd");
+  }
+
+  get fullName(): string {
+    return `${this.first} ${this.last}`;
+  }
+
+  get score(): number {
+    return this._score;
+  }
+
+  set score(newScore: number) {
+    if (newScore < 0) {
+      throw new Error("Score cannot be negative!");
+    }
+    this._score = newScore;
   }
 }
