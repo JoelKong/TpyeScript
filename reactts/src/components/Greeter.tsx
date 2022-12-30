@@ -1,9 +1,10 @@
-import React from "react";
+// import React from "react";
 
-interface GreeterProps {
-  person: string;
-}
+// interface GreeterProps {
+//   person: string;
+// }
 
-export default function Greeter({ person }: GreeterProps): JSX.Element {
-  return <h1>Hello, {person}</h1>;
-}
+// export default function Greeter({ person }: GreeterProps): JSX.Element {
+//   return <h1>Hello, {person}</h1>;
+// }
+export {};
